@@ -1,25 +1,125 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Ru-eE-flx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-6T-kbL">
+                                <rect key="frame" x="0.0" y="64" width="164" height="248"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGO-v2-V2W">
+                                        <rect key="frame" x="8" y="8" width="136" height="68"/>
+                                        <color key="backgroundColor" red="1" green="0.63734293494371064" blue="0.25631671585730098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="系统扫码">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="systemQRScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JPK-Ae-9hc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJP-p9-mtu">
+                                        <rect key="frame" x="8" y="84" width="136" height="68"/>
+                                        <color key="backgroundColor" red="1" green="0.63734293494371064" blue="0.25631671585730098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="ZBar扫码">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ZBar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZlF-wt-cUV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-FF-F2l">
+                                        <rect key="frame" x="8" y="160" width="136" height="68"/>
+                                        <color key="backgroundColor" red="1" green="0.63734293494371064" blue="0.25631671585730098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="ZXing扫码">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Zxing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCD-WZ-cEF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B77-4s-lye">
+                                <rect key="frame" x="0.0" y="327" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="扫描二维码" width="150" id="2OI-dG-1jF"/>
+                                    <barButtonItem title="生成二维码" width="145" id="QUS-Xd-dTY"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTk-Mo-4RT">
+                                <rect key="frame" x="156" y="64" width="164" height="248"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezd-o5-S7x">
+                                        <rect key="frame" x="8" y="8" width="136" height="68"/>
+                                        <color key="backgroundColor" red="1" green="0.63734293490000005" blue="0.25631671589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="系统生成">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="系统生成:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fyu-bg-dxA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddN-HO-RGb">
+                                        <rect key="frame" x="8" y="84" width="136" height="68"/>
+                                        <color key="backgroundColor" red="1" green="0.63734293490000005" blue="0.25631671589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="生成">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="LibQrenCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wye-Hr-FNE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOE-11-cWr">
+                                        <rect key="frame" x="8" y="160" width="136" height="68"/>
+                                        <color key="backgroundColor" red="1" green="0.63734293490000005" blue="0.25631671589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="ZXing">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mhy-KI-Mbo"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="594" y="953"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Iad-fw-7S5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Ru-eE-flx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yUy-MH-xhv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WWL-QW-oIg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3o-1x-Gml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127" y="953"/>
         </scene>
     </scenes>
 </document>
